@@ -1,7 +1,7 @@
 .site-feature {
   .hero__background {
     height: 470px;
-    background: url('/img/stage.jpg') no-repeat center center;
+    background: url('../img/stage.jpg') no-repeat center center;
     background-color: #000;
     @media #{$large-up} {
       height: 570px;
