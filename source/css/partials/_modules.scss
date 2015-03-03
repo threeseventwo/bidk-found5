@@ -1,0 +1,73 @@
+.site-feature {
+  .hero__background {
+    height: 470px;
+    background: url('/img/stage.jpg') no-repeat center center;
+    background-color: #000;
+    @media #{$large-up} {
+      height: 570px;
+    }
+  }
+  h1 {
+    color: white;
+  }
+}
+
+.card {
+  background: white;
+}
+
+.mission {
+  .mission__statement {
+    text-align: center;
+    @include grid-column(12);
+    h3 {}
+    p {}
+  }  
+}
+
+.teasers {
+  .teaser {
+    position: relative;
+    .teaser__content {
+      padding: 8px 12px;
+      h4 {}
+      p {}
+    }
+    .teaser__info {
+      .teaser__learnmore {
+        background: $primary-color;
+        a {
+          color: #ffffff;
+        }
+        &:after {
+          content: "Coming Soon";
+          float: right;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .teaser--main {
+    @include grid-column(7, $collapse: true);
+  }
+  .teaser--secondary {
+    @include grid-column(4, $float:right, $collapse: true);
+  }
+  .teaser__learnmore {
+    @include grid-column(12);
+    position: absolute;
+    top: 0;
+  }
+}
+
+.cta {
+  .cta__message {
+    @include grid-column(7);
+    h4 {}
+    p {}
+  }
+  .cta__button {
+    @include grid-column(4, $last-column: true);
+    a {}
+  }
+}

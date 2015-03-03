@@ -1,17 +1,27 @@
-.row
-  .large-3.columns
-    %h1
-      %img{:src => "http://placehold.it/400x100&text=Logo"}
-  .large-9.columns
-    %ul.right.button-group
+%nav.top-bar{"data-topbar" => "", :role => "navigation"}
+  %ul.title-area
+    %li.name
+      %h1
+        %a{:href => "#"} My Site
+    / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+    %li.toggle-topbar.menu-icon
+      %a{:href => "#"}
+        %span
+  %section.top-bar-section
+    / Right Nav Section
+    %ul.right
       %li
-        %i.fi-play
-        %a.button{:href => "#"} Link
+        %a{:href => "#"} Register Now
       %li
-        %i.fi-pause
-        %a.button{:href => "#"} Link
+        %a{:href => "#"} Log In
       %li
-        %i.fi-stop
-        %a.button{:href => "#"} Link
+        %a{:href => "#"} Videos
       %li
-        %a.button{:href => "#"} Link
+        %a{:href => "#"} Blog
+      %li.active.has-dropdown
+        %a{:href => "#"} ENG
+        %ul.dropdown
+          %li
+            %a{:href => "#"} ESP
+          %li
+            %a{:href => "#"} POR

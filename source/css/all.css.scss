@@ -1,2 +1,64 @@
 @import "normalize.scss";
+@import "settings-foundation";
+
+$primary-color: #fc852d;
+// $secondary-color: #e7e7e7;
+// $alert-color: #f04124;
+// $success-color: #43AC6A;
+// $warning-color: #f08a24;
+// $info-color: #a0d3e8;
+
+
+
 @import "foundation.scss";
+
+// Here we define the lower and upper bounds for each media size
+$small-range: (0em, 40em); /* 0, 640px */
+$medium-range: (40.063em, 64em); /* 641px, 1024px */
+$large-range: (64.063em, 90em); /* 1025px, 1440px */
+$xlarge-range: (90.063em, 120em); /* 1441px, 1920px */
+$xxlarge-range: (120.063em); /* 1921px */
+
+
+@import "partials/layout";
+@import "partials/modules";
+
+////////////////////////////
+// Quick Reference
+////////////////////////////
+
+@media #{$small-up} { }
+@media #{$small-only} { }
+
+@media #{$medium-up} { }
+@media #{$medium-only} { }
+
+@media #{$large-up} { }
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { }
+
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { }
+
+.custom-grid-class {
+  @include grid-column(
+    // Control the number of columns
+    $columns:4,
+    // Specify whether or not this is the last column in the row
+    $last-column:true,
+    // Choose whether or not to center this column
+    $center:true,
+    // Choose the number of columns to offset this element by
+    $offset:3,
+    // Specify how many columns to push this element past
+    $push:3,
+    // Specify how many columns to pull this element past
+    $pull:9,
+    // Set to true to remove column padding
+    $collapse:true,
+    // Specify the float direction
+    $float:right
+  );
+}

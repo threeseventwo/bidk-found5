@@ -1,0 +1,51 @@
+// Logo
+.title-area {
+  .name {
+    h1 {
+      text-indent: -9999px;
+      width: 222px;
+      a {
+        background: url('/img/logo.png');
+        background-size: 90%;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+// Layout and Structure
+.hero {
+  width: 100%;
+  position: relative;
+  .hero__background {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+.main {
+  background: #ededed;
+  section {
+    @include grid-row();
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+footer {
+  padding-top: 10px;
+}
+
+.cta {
+  
+}

@@ -2,38 +2,41 @@
 title: Foundation
 ---
          
-.row
-  .large-12.columns
-    %ul.example-orbit{"data-orbit" => true}
-      %li
-        %img{:src => "http://placehold.it/1000x400"}
-      %li
-        %img{:src => "http://placehold.it/1000x400"}
-      %li
-        %img{:src => "http://placehold.it/1000x400"}
+.site-feature.hero
+  .hero__background
+    %h1 Online Excellent Things
 
-%hr
+%main.main
+  %section.mission
+    .mission__statement.card
+      %h3 Our Mission
+      %p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est.
+      
+  %section.teasers
+    .teaser.teaser--main.card
+      .teaser__img
+        %img{:src => "http://placehold.it/800x300&text=[img]"}
+      .teaser__content
+        %h4 Amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit.
+        %p reprehenderit CulpaBoudin
+      .teaser__info
+        .teaser__learnmore
+          %a{:href => "#"} Learn More
 
-.row
-  .large-4.columns
-    %img{:src => "http://placehold.it/400x300&text=[img]"}
-    %h4 This is a content section.
-    %p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.
-  .large-4.columns
-    %img{:src => "http://placehold.it/400x300&text=[img]"}
-    %h4 This is a content section.
-    %p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.
-  .large-4.columns
-    %img{:src => "http://placehold.it/400x300&text=[img]"}
-    %h4 This is a content section.
-    %p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.
+    .teaser.teaser--secondary.card
+      .teaser__img
+        %img{:src => "http://placehold.it/400x230&text=[img]"}
+      .teaser__content
+        %h4 Amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit.
+        %p reprehenderit CulpaBoudin
+      .teaser__info
+        .teaser__learnmore
+          %a{:href => "#"} Learn More
 
-.row
-  .large-12.columns
-    .panel
+
+  %section.cta
+    .cta__message
       %h4 Get in touch!
-      .row
-        .large-9.columns
-          %p We'd love to hear from you, you attractive person you.
-        .large-3.columns
-          %a.radius.button.right{:href => "#"} Contact Us
+      %p We'd love to hear from you, you attractive person you.
+    .cta__button
+      %a.radius.button.right{:href => "#"} Contact Us
