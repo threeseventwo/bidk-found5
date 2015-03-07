@@ -4,39 +4,66 @@ title: Foundation
          
 .site-feature.hero
   .hero__background
-    %h1 Online Excellent Things
+    %h1.header.hero__header Online Charity Auctions
 
 %main.main
-  %section.mission
+  %section.contain.mission
     .mission__statement.card
-      %h3 Our Mission
+      %h3.header Our Mission
       %p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est.
       
   %section.teasers
-    .teaser.teaser--main.card
-      .teaser__img
-        %img{:src => "http://placehold.it/800x300&text=[img]"}
-      .teaser__content
-        %h4 Amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit.
-        %p reprehenderit CulpaBoudin
-      .teaser__info
-        .teaser__learnmore
-          %a{:href => "#"} Learn More
+    .contain
+      .teaser.teaser--main.card
+        .teaser__img
+          =image_tag 'banjo.jpg'
+        .teaser__content
+          %h4 Amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit.
+          %p reprehenderit CulpaBoudin
+        .teaser__info
+          .teaser__learnmore
+            %a{:href => "#"} Learn More
 
-    .teaser.teaser--secondary.card
-      .teaser__img
-        %img{:src => "http://placehold.it/400x230&text=[img]"}
-      .teaser__content
-        %h4 Amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit.
-        %p reprehenderit CulpaBoudin
-      .teaser__info
-        .teaser__learnmore
-          %a{:href => "#"} Learn More
+      .teaser.teaser--secondary.card
+        .teaser__img
+          =image_tag 'car.jpg'
+        .teaser__content
+          %h4 Eiusmod commodo, chuck duis velit. commodo commodo
+          %p reprehenderit CulpaBoudin
+        .teaser__info
+          .teaser__learnmore
+            %a{:href => "#"} Learn More
+    .contain
+      .teaser.teaser--secondary.card
+        .teaser__img
+          =image_tag 'car.jpg'
+        .teaser__content
+          %h4 Eiusmod commodo, chuck duis velit. commodo commodo
+          %p reprehenderit CulpaBoudin
+        .teaser__info
+          .teaser__learnmore
+            %a{:href => "#"} Learn More
+          
+      .teaser.teaser--main.card
+        .teaser__img
+          =image_tag 'banjo.jpg'
+        .teaser__content
+          %h4 Amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit.
+          %p reprehenderit CulpaBoudin
+        .teaser__info
+          .teaser__learnmore
+            %a{:href => "#"} Learn More
 
 
-  %section.cta
-    .cta__message
-      %h4 Get in touch!
-      %p We'd love to hear from you, you attractive person you.
-    .cta__button
-      %a.radius.button.right{:href => "#"} Contact Us
+  %section.past-teasers
+    .contain
+      .teaser.teaser--main.card
+        .teaser__img
+          =image_tag 'banjo.jpg'
+        .teaser__content
+          %h4 Amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit.
+          %p reprehenderit CulpaBoudin
+        .teaser__info
+          .teaser__learnmore
+            %a{:href => "#"} Learn More
+

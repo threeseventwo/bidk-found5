@@ -35,7 +35,7 @@
 
 .main {
   background: #ededed;
-  section {
+  .contain {
     @include grid-row();
     padding-top: 20px;
     padding-bottom: 20px;

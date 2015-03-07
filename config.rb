@@ -89,5 +89,6 @@ end
 # host it on github pages (If this is a github repository)
 activate :deploy do |deploy|
   deploy.method = :git
+  deploy.remote   = 'github' # remote name or git url, default: origin
   deploy.build_before = true
 end
