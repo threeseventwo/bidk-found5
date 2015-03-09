@@ -1,69 +1,97 @@
 ---
 title: Foundation
 ---
-         
-.site-feature.hero
-  .hero__background
-    %h1.header.hero__header Online Charity Auctions
-
 %main.main
-  %section.contain.mission
-    .mission__statement.card
-      %h3.header Our Mission
+  .site-feature.hero
+    .hero__background
+      %h1.hero__header.heading Online Charity Auctions
+
+
+  %section.mission
+    .mission__statement
+      %h3.heading Our Mission
       %p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est.
-      
+    
   %section.teasers
-    .contain
-      .teaser.teaser--main.card
+    .teaser--main.teaser--layout
+      .teaser
         .teaser__img
           =image_tag 'banjo.jpg'
         .teaser__content
-          %h4 Amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit.
+          %h4 Amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Eiusmod commodo, chuck duis velit. commodo commodo.
           %p reprehenderit CulpaBoudin
         .teaser__info
-          .teaser__learnmore
+          .teaser__learnmore#cool
             %a{:href => "#"} Learn More
 
-      .teaser.teaser--secondary.card
+    .teaser--secondary.teaser--layout
+      .teaser
         .teaser__img
           =image_tag 'car.jpg'
         .teaser__content
-          %h4 Eiusmod commodo, chuck duis velit. commodo commodo
+          %h4 Eiusmod commodo, chuck duis velit. commodo commodo. Amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit.
           %p reprehenderit CulpaBoudin
         .teaser__info
           .teaser__learnmore
             %a{:href => "#"} Learn More
-    .contain
-      .teaser.teaser--secondary.card
+
+    .teaser--secondary.teaser--layout
+      .teaser
         .teaser__img
-          =image_tag 'car.jpg'
+          =image_tag 'swirl.jpg'
         .teaser__content
-          %h4 Eiusmod commodo, chuck duis velit. commodo commodo
+          %h4 Amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Eiusmod commodo, chuck duis velit. commodo commodo commodo.
           %p reprehenderit CulpaBoudin
         .teaser__info
           .teaser__learnmore
             %a{:href => "#"} Learn More
-          
-      .teaser.teaser--main.card
+      
+    .teaser--main.teaser--layout
+      .teaser
+        .teaser__img
+          =image_tag 'city.jpg'
+        .teaser__content
+          %h4 Eiusmod commodo, chuck duis velit. commodo commodo. Amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit.
+          %p reprehenderit CulpaBoudin
+        .teaser__info
+          .teaser__learnmore
+            %a{:href => "#"} Learn More
+
+%section.past-teaser-wrap
+  .past-teasers
+    %h3.heading 
+      Past Auctions
+      %a.teasers__view-all-link{:href=>"#{}"} View All
+    .teaser--past-teaser
+      .teaser
+        .teaser__img
+          =image_tag 'city.jpg'
+        .teaser__content
+          %h4 Amet nulla ham qui sint exercitation eiusmod commodo.
+          %p reprehenderit CulpaBoudin
+        .teaser__info
+          .teaser__learnmore
+            %a{:href => "#"} View
+            .text SOLD!
+    .teaser--past-teaser
+      .teaser
+        .teaser__img
+          =image_tag 'stage.jpg'
+        .teaser__content
+          %h4 Amet nulla ham qui sint exercitation eiusmod commodo.
+          %p reprehenderit CulpaBoudin
+        .teaser__info
+          .teaser__learnmore
+            %a{:href => "#"} View
+            .text SOLD!
+    .teaser--past-teaser
+      .teaser
         .teaser__img
           =image_tag 'banjo.jpg'
         .teaser__content
-          %h4 Amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit.
+          %h4 Amet nulla ham qui sint exercitation eiusmod commodo.
           %p reprehenderit CulpaBoudin
         .teaser__info
           .teaser__learnmore
-            %a{:href => "#"} Learn More
-
-
-  %section.past-teasers
-    .contain
-      .teaser.teaser--main.card
-        .teaser__img
-          =image_tag 'banjo.jpg'
-        .teaser__content
-          %h4 Amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit.
-          %p reprehenderit CulpaBoudin
-        .teaser__info
-          .teaser__learnmore
-            %a{:href => "#"} Learn More
-
+            %a{:href => "#"} View
+            .text SOLD!

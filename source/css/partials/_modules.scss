@@ -1,14 +1,19 @@
-.header {
-  font-family: 'Playfair Display', serif;  
+// Global Styles and Shared Module Styles
+.heading {
+  @extend .playfair-font-family;
 }
 
 .card {
-  background: white;
+  background: $white;
   color: #777;
 }
 
 .btn {
   @include button();
+  .past-teasers & {
+    
+    @include button($bg:$secondary-color);
+  }
   font-weight: 100;
 }
 
@@ -17,15 +22,18 @@
   padding: .5em .6em;
   font-size: 1.325em;
   text-transform: uppercase;
-  position: relative;
-  left: -28px;
+  position: absolute;
+  left: -12px;
   top: .3em;
-  font-family: 'Lato', sans-serif;  
   &:after {
     border-top: 3px solid #d55004;
     border-right: 6px solid #d55004;
     border-bottom: 3px solid transparent;
     border-left: 6px solid transparent;
+    .past-teasers & {
+      border-top: 3px solid darken($secondary-color, 20%);
+      border-right: 6px solid darken($secondary-color, 20%);
+    }
     content: "";
     left: 0;
     position: absolute;
@@ -33,6 +41,7 @@
   }
 }
 
+// Hero Home Page
 .site-feature {
   .hero__background {
     height: 470px;
@@ -50,86 +59,128 @@
   }
 }
 
-.mission {
-  .mission__statement {
-    text-align: center;
-    padding: 1em 0;
-    margin: 2em 0;
-    @include grid-column(12);
-    h3 {
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 1.8em;
-    }
-    p {
-      font-size: 1.425em;
-      font-family: 'Lato', sans-serif;
-      padding: 0 4em;
-    }
+// Main Mission Statement
+.mission__statement {
+  text-align: center;
+  padding: 1em 0;
+  margin: 2em 0;
+  h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+  }
+  p {
+    font-size: 1.425em;
+    padding: 0 4em;
   }
 }
 
 
-.teaser {
-  position: relative;
-  .teaser__content {
-    padding: 8px 12px;
-    h4 {
-      font-family: 'Lato', sans-serif;
-      font-weight: 300;
-      font-size: 1.825em;
-    }
-    p {
-      font-family: 'Oswaldo', sans-serif;
-      font-weight: 700;
-      font-style: italic;
-      font-size: .8em;
-      margin-bottom: 0;
+// Teasers
+.teaser__content {
+  padding: 8px 12px;
+  h4 {
+    font-weight: 300;
+    font-size: 1.825em;
+    .teaser--secondary & {
+      font-size: 1.325em;
     }
   }
-  .teaser__info {
-    .teaser__learnmore {
-      background: #333333;
+  p {
+    @extend .oswald-font-family;
+    font-weight: 400;
+    font-style: italic;
+    font-size: .8em;
+    margin-bottom: 0;
+  }
+}
+.teaser__info {
+  .teaser__learnmore {
+    background: #333333;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: 68px;
+    .past-teasers & {
+      height: 76px;
       a {
-        @extend .btn--ribbon;
+        font-size: 1.1em;
+        top: 8px;
       }
-      &:after {
-        font-family: 'Oswald', sans-serif;
-        text-transform: uppercase;
-        font-size: 1.325em;
-        letter-spacing: 1px;
-        position: relative;
-        top: .7em;
-        font-weight: 400;
-        content: "Coming Soon";
-        float: right;
-        color: #ffffff;
+    }
+    a {
+      @extend .btn--ribbon;
+
+    }
+    &:after {
+      @extend .oswald-font-family ;
+      text-transform: uppercase;
+      font-size: 1.325em;
+      letter-spacing: 1px;
+      position: relative;
+      top: .8em;
+      right: 12px;
+      font-weight: 400;
+      content: "Coming Soon";
+      float: right;
+      color: #ffffff;
+      .past-teasers & {
+        width: 0;
+        height: 0;
+        border-top: 65px solid $secondary-color;
+        border-left: 65px solid transparent;
+        right: 0;
+        top: 0;
+        position: absolute;
+        content: "";
       }
+    }
+    .text {
+      @extend .oswald-font-family ;
+      color: #fff;
+      font-size: 1em;
+      right: 3px;
+      font-weight: 700;
+      top: .7em;
+      z-index: 10;
+      position: absolute;
+      transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
     }
   }
 }
 
-.teaser--main {
-  @include grid-column(7, $collapse: true, $last-column: false);
-}
-.teaser--secondary {
-  @include grid-column(4, $float:right, $collapse: true);
-}
-.teaser__learnmore {
-  @include grid-column(12);
-  position: absolute;
-  top: 0;
+// Shared Module styles
+.teaser, .mission__statement {
+  @extend .card;
 }
 
+// Shared Module styles
 
-.cta {
-  .cta__message {
-    @include grid-column(7);
-    h4 {}
-    p {}
-  }
-  .cta__button {
-    @include grid-column(4, $last-column: true);
-    a {}
+
+.past-teaser-wrap {
+  background-color: #C3C3C3;
+  padding-top: 3em;
+}
+
+.past-teasers {
+  h3 {
+    margin-top: 1em;
+    margin-bottom: 1.2em;
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    letter-spacing: .0625em;
+    text-transform: uppercase;
+    .teasers__view-all-link {
+      clear:both;
+      display: block;
+      font-size: .7em;
+      margin-top: .4em;
+      color: $secondary-color;
+      text-transform: none;
+      font-family: $font-family-sans-serif;
+    }
   }
 }
