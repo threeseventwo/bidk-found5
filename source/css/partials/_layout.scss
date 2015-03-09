@@ -5,7 +5,6 @@
       text-indent: -9999px;
       width: 222px;
       a {
-        background: url('../img/logo.png');
         background-size: 90%;
         background-position: center center;
         background-repeat: no-repeat;
@@ -14,7 +13,20 @@
   }
 }
 
-// Layout and Structure
+.main {
+  background: #ededed;
+}
+
+.teasers, .mission, .past-teasers {
+  @include grid-row();
+}
+
+footer {
+  padding-top: 10px;
+}
+
+
+// Module Layouts
 .hero {
   width: 100%;
   position: relative;
@@ -23,29 +35,62 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    padding:2em;
+  }
+  .logo__img{
+    margin:10px 0 60px 0;
+    width:11.5em
   }
   h1 {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 10px;
-    left: 10px;
   }
 }
 
-.main {
-  background: #ededed;
-  .contain {
-    @include grid-row();
-    padding-top: 20px;
-    padding-bottom: 20px;
+.mission__statement {
+  @include grid-column(12);
+}
+
+.teaser {
+  position: relative;
+  margin-bottom: 3em;
+  height: 520px;
+  .teaser--past-teaser & {
+    height: 390px;
   }
 }
 
-footer {
-  padding-top: 10px;
+.teaser--main {
+  @include grid-column(8, $collapse: true);
+}
+.teaser--secondary {
+  @include grid-column(4,  $collapse: true);//, $float:right, $last-column: true);
 }
 
-.cta {
-  
+.teaser--past-teaser {
+  @include grid-column(4, $collapse: true);
+  padding-left: 30px;
+  &:first-child {
+    padding-left: 0px;
+  }
+}
+.teaser--layout {
+  padding-left: 20px;
+  &:nth-child(odd) {
+    padding-right: 20px;
+    padding-left: 0px;
+  }
+}
+
+.teaser__img {
+  height: 350px;
+  overflow: hidden;
+  .teaser--past-teaser & {
+    height: 220px;
+  }
+  img {
+    position: relative;
+    top: 0px;
+  }
 }

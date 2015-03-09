@@ -1,13 +1,12 @@
 %nav.top-bar{"data-topbar" => "", :role => "navigation"}
-  %section.socialicons
-    %a{:href => "https://www.facebook.com/BidKind"} &#xe227; 
-    %a{:href => "https://twitter.com/bidkind"} &#xe286;
-    %a{:href => "http://www.pinterest.com/bidkind/"} &#xe264;
-    %a{:href => "http://bidkind.tumblr.com/"} &#xe285;
-    %a{:href => "http://instagram.com/bidkind"} &#xe300;
-    %a{:href => "http://www.youtube.com/bidkind"} &#xe299;
-    %a{:href => "https://plus.google.com/+Bidkind/posts"} &#xe239;
-  
+  %ul.title-area
+    %li.name
+      %h1
+        %a{:href => "#"} My Site
+    / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+    %li.toggle-topbar.menu-icon
+      %a{:href => "#"}
+        %span
   %section.top-bar-section
     / Right Nav Section
     %ul.right

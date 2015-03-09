@@ -1,34 +1,54 @@
 @import "normalize.scss";
 @import "settings-foundation";
 
-
-////////////////////////////////
+//////////////////////////////////
 //// Color Settings for Foundation
-////////////////////////////////
+//////////////////////////////////
 $primary-color: #fb7a2a;
-// $secondary-color: #e7e7e7;
+$secondary-color: #009cd6;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
-////////////////////////////////
-//// Header Font Styles for Foundation
-////////////////////////////////
-$header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+//////////////////////////////////
+//// Font Styles for Foundation
+//////////////////////////////////
+$font-family-sans-serif: "Lato", Helvetica, Roboto, Arial, sans-serif;
+// $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+// $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+
+$header-font-family: "Lato", Helvetica, Roboto, Arial, sans-serif;
 $header-font-weight: 700;
 $header-font-style: normal;
 $header-font-color: #222;
 $header-line-height: 1.4;
 $header-top-margin: .2rem;
 $header-bottom-margin: .5rem;
-$header-text-rendering: optimizeLegibility;
 
+.playfair-font-family {
+  font-family: 'Playfair Display', Cambria, "Times New Roman", Times, serif;
+}
+.oswald-font-family  {
+  font-family: 'Oswald', Helvetica, Roboto, Arial, sans-serif;
+}
 
+//////////////////////////////////
+//// Grid Settings for Foundation
+//////////////////////////////////
 
-@import "foundation.scss";
+// $include-html-grid-classes: $include-html-classes;
+// $include-xl-html-grid-classes: false;
 
-// Here we define the lower and upper bounds for each media size
+$row-width: rem-calc(1100);
+// $total-columns: 12;
+$column-gutter: rem-calc(90);
+// $last-child-float: $opposite-direction;
+
+//////////////////////////////////
+//// Media Queries for Foundation
+//////////////////////////////////
+
 $small-range: (0em, 40em); /* 0, 640px */
 $medium-range: (40.063em, 64em); /* 641px, 1024px */
 $large-range: (64.063em, 90em); /* 1025px, 1440px */
@@ -36,14 +56,11 @@ $xlarge-range: (90.063em, 120em); /* 1441px, 1920px */
 $xxlarge-range: (120.063em); /* 1921px */
 
 
-
+@import "foundation.scss";
 @import "partials/layout";
 @import "partials/modules";
 
-////////////////////////////
-// Quick Reference
-////////////////////////////
-
+/*
 @media #{$small-up} { }
 @media #{$small-only} { }
 
@@ -58,24 +75,4 @@ $xxlarge-range: (120.063em); /* 1921px */
 
 @media #{$xxlarge-up} { }
 @media #{$xxlarge-only} { }
-
-.custom-grid-class {
-  @include grid-column(
-    // Control the number of columns
-    $columns:4,
-    // Specify whether or not this is the last column in the row
-    $last-column:true,
-    // Choose whether or not to center this column
-    $center:true,
-    // Choose the number of columns to offset this element by
-    $offset:3,
-    // Specify how many columns to push this element past
-    $push:3,
-    // Specify how many columns to pull this element past
-    $pull:9,
-    // Set to true to remove column padding
-    $collapse:true,
-    // Specify the float direction
-    $float:right
-  );
-}
+*/
